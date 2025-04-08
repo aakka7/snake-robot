@@ -13,11 +13,11 @@
   - $ source devel/setup.bash
   - $ rosrun snakebot forward.py
 
-#### Current progress
+### Notes
 - Coordinates in `forward.py` appear correct from plots
 - ==TODO== Determine why movement not occurring in Gazebo simulation
 
-## From original code
+## From Original Repo
 ### Results: Output video
 
 [![All the snake gaits](https://user-images.githubusercontent.com/32901101/111253024-ca6d4e00-85e8-11eb-8b49-166eb2cf8421.PNG)](https://drive.google.com/file/d/1BfiJ1PDn6ounzhUILLyYK5kYYPiaXl7P/view?usp=sharing)
