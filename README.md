@@ -14,6 +14,7 @@
   - $ rosrun snakebot forward.py
 
 ### Notes
+- Gait is now in its own folder outside of `scripts` to remove circular dependencies
 - Coordinates in `forward.py` appear correct from plots
 - ==TODO== Determine why movement not occurring in Gazebo simulation
 
