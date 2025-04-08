@@ -2,16 +2,22 @@
 
 
 ### Instructions to run the code:
-- Clone the repo using: $ git clone https://github.com/anubhavparas/snake_robot.git
+- Clone the repo using: $ git clone https://github.com/aakka7/snake_robot.git
 - $ cd snake_robot/snakebot_ws
 - $ catkin_make
 - $ source devel/setup.bash
 - To spawn the controllers and the model in gazebo: $ roslaunch snakebot snakebot.launch
-- To run the gait simulation, for example: to move the snake in the simple linear forward motion:
+- To run the gait simulation, for example: to move the snake in the simple forward motion:
   - Open a new terminal
   - Change the directory to /snakebot_ws
   - $ source devel/setup.bash
-  - $ rosrun snakebot linear_progression.py
+  - $ rosrun snakebot forward.py
+
+#### Current progress
+- Coordinates in `forward.py` appear correct from plots
+- ==TODO== Determine why movement not occurring in Gazebo simulation
+
+## From original code
 ### Results: Output video
 
 [![All the snake gaits](https://user-images.githubusercontent.com/32901101/111253024-ca6d4e00-85e8-11eb-8b49-166eb2cf8421.PNG)](https://drive.google.com/file/d/1BfiJ1PDn6ounzhUILLyYK5kYYPiaXl7P/view?usp=sharing)
