@@ -1,0 +1,16 @@
+setup.py
+scripts/caterpillar.py
+scripts/corkscrew.py
+scripts/forward.py
+scripts/gait.py
+scripts/lateral_undulation.py
+scripts/linear_progression.py
+scripts/rolling.py
+scripts/rotation_along_axis.py
+scripts/sidewinding.py
+scripts/transformer.py
+scripts/video.py
+snakebot.egg-info/PKG-INFO
+snakebot.egg-info/SOURCES.txt
+snakebot.egg-info/dependency_links.txt
+snakebot.egg-info/top_level.txt

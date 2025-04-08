@@ -8,7 +8,7 @@ import sys, select, termios, tty
 import math
 import numpy as np
 
-from gait import Gait
+from custom_libs.gait import Gait
 
 sin = math.sin
 rad = math.radians

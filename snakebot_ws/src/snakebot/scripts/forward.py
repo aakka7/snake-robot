@@ -5,10 +5,12 @@ from std_msgs.msg import Float64
 
 import sys, select, termios, tty
 import math
-from gait import Gait
+from custom_libs.gait import Gait
 
 sin = math.sin
 rad = math.radians
+
+# terminal output: [INFO] [position?, time]: Angle: {radians} for joint = {number}
 
 class ForwardGait(Gait):
     def __init__(self, publishers, num_joints=10):
@@ -21,9 +23,13 @@ class ForwardGait(Gait):
         # W0=90;W1=0;W2=3;W3=1;W4=3;W5=1;W6=3;W7=1;W8=3;W9=1;
         # ph0=0;ph1=180;ph2=0;ph3=180;ph4=120;ph5=0;ph6=240;ph7=180;ph8=360;ph9=0;
         
-        amplitudes = [0, 90, 30, 0, 30, 0, 30, 0, 30, 90]
-        omegas = [90, 0, 3, 1, 3, 1, 3, 1, 3, 1]
-        phases = [0, 180, 0, 180, 120, 0, 240, 180, 360, 0]
+        delta = (2*math.pi)/num_joints
+        #amplitudes = [0, 90, 30, 0, 30, 0, 30, 0, 30, 90]
+        amplitudes = [45] * num_joints # amplitude in degrees
+        #omegas = [90, 0, 3, 1, 3, 1, 3, 1, 3, 1]
+        omegas = [3] * num_joints
+        #phases = [0, 180, 0, 180, 120, 0, 240, 180, 360, 0]
+        phases = [i * delta for i in range(num_joints)]
 
         return amplitudes, omegas, phases
 
@@ -31,7 +37,7 @@ class ForwardGait(Gait):
     def update_and_publish_angles(self, t):
         
         for i in range(self.num_joints):
-            a = rad(self.amplitudes[i])
+            a = rad(self.amplitudes[i]) # converts to radians
             w = self.omegas[i]
             ph = rad(self.phases[i])
 

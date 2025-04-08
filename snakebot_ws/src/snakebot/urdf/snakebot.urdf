@@ -2,6 +2,8 @@
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+<!-- Changelog: velocity originally 0.1, changed to 0.5 -->
 <robot
   name="snakebot">
   <link
@@ -111,7 +113,7 @@
       lower="-3.14"
       upper="3.14"
       effort="1000"
-      velocity="0.1" />
+      velocity="0.5" />
   </joint>
   <link
     name="link_one">
@@ -222,7 +224,7 @@
       lower="-3.14"
       upper="3.14"
       effort="1000"
-      velocity="0.1" />
+      velocity="0.5" />
   </joint>
   <link
     name="link_two">
@@ -333,7 +335,7 @@
       lower="-3.14"
       upper="3.14"
       effort="1000"
-      velocity="0.1" />
+      velocity="0.5" />
   </joint>
   <link
     name="link_three">
@@ -444,7 +446,7 @@
       lower="-3.14"
       upper="3.14"
       effort="1000"
-      velocity="0.1" />
+      velocity="0.5" />
   </joint>
   <link
     name="link_four">
@@ -555,7 +557,7 @@
       lower="-3.14"
       upper="3.14"
       effort="1000"
-      velocity="0.1" />
+      velocity="0.5" />
   </joint>
   <link
     name="link_five">
@@ -666,7 +668,7 @@
       lower="-3.14"
       upper="3.14"
       effort="1000"
-      velocity="0.1" />
+      velocity="0.5" />
   </joint>
   <link
     name="link_six">
@@ -777,7 +779,7 @@
       lower="-3.14"
       upper="3.14"
       effort="1000"
-      velocity="0.1" />
+      velocity="0.5" />
   </joint>
   <link
     name="link_seven">
@@ -888,7 +890,7 @@
       lower="-3.14"
       upper="3.14"
       effort="1000"
-      velocity="0.1" />
+      velocity="0.5" />
   </joint>
   <link
     name="link_eight">
@@ -999,7 +1001,7 @@
       lower="-3.14"
       upper="3.14"
       effort="1000"
-      velocity="0.1" />
+      velocity="0.5" />
   </joint>
   <link
     name="link_nine">
@@ -1110,7 +1112,7 @@
       lower="-3.14"
       upper="3.14"
       effort="1000"
-      velocity="0.1" />
+      velocity="0.5" />
   </joint>
   <link
     name="link_ten">
