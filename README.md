@@ -12,6 +12,25 @@
   - Change the directory to /snakebot_ws
   - $ source devel/setup.bash
   - $ rosrun snakebot forward.py
+ 
+### Common error fixes
+To fix error:
+```
+[ERROR] Could not load controller 'joint_<#>_position_controller' because controller type 'effort_controllers/JointPositionController' does not exist. 
+```
+Ensure effort controller is installed (we're using noetic)
+```
+sudo apt-get install ros-<your-ros-distro>-effort-controllers
+```
+
+To fix error:
+```
+[ERROR] [1745438802.398592968, 0.511000000]: Exception thrown while initializing controller 'joint_<#>_position_controller'. Could not find resource 'rod_<#>_joint' in 'hardware_interface::EffortJointInterface'.
+```
+Ensure is installed controlle and controllers is installed (we're using noetic)
+```
+sudo apt-get install ros-<your-ros-distro>-ros-control ros-<your-ros-distro>-ros-controllers
+```
 
 ### Notes
 - Gait is now in its own folder outside of `scripts` to remove circular dependencies
