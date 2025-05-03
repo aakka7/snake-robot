@@ -6,29 +6,29 @@
 
     <!-- Add your gazebo sensors here -->
     <xacro:macro name="joint_transmission" params="joint_num">
-        <transmission name="joint_{joint_num}_trans">
+        <transmission name="joint_${joint_num}_trans">
             <type>transmission_interface/SimpleTransmission</type>
+            <actuator name="motor_${joint_num}">
+                <mechanicalReduction>1</mechanicalReduction>
+                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            </actuator>
             <joint name="rod_${joint_num}_joint">
                 <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             </joint>
-            <actuator name="motor_${joint_num}">
-                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-                <mechanicalReduction>1</mechanicalReduction>
-            </actuator>
         </transmission>
     </xacro:macro>
     
-    <joint_transmission joint_num="one"/>
+    <xacro:joint_transmission joint_num="one"/>
     <!--<joint_transmission joint_num="two"/> -->
-    <joint_transmission joint_num="three"/>
-    <joint_transmission joint_num="four"/>
-    <joint_transmission joint_num="five"/>
-    <joint_transmission joint_num="six"/>
-    <joint_transmission joint_num="seven"/>
-    <joint_transmission joint_num="eight"/>
-    <joint_transmission joint_num="nine"/>
-    <joint_transmission joint_num="ten"/>
-    <joint_transmission joint_num="eleven"/>
+    <xacro:joint_transmission joint_num="three"/>
+    <xacro:joint_transmission joint_num="four"/>
+    <xacro:joint_transmission joint_num="five"/>
+    <xacro:joint_transmission joint_num="six"/>
+    <xacro:joint_transmission joint_num="seven"/>
+    <xacro:joint_transmission joint_num="eight"/>
+    <xacro:joint_transmission joint_num="nine"/>
+    <xacro:joint_transmission joint_num="ten"/>
+    <xacro:joint_transmission joint_num="eleven"/>
 
     <!--  Gazebo plugin for control here is already added for you -->
     <gazebo>
