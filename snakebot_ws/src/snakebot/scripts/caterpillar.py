@@ -8,6 +8,7 @@ import sys, select, termios, tty
 import math
 import numpy as np
 
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from custom_libs.gait import Gait
 
 sin = math.sin
